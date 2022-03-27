@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../style.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     <script language="javascript" src="../admin/inc-script/common.js"></script>
-
+    <script src="../logging.js"></script>
 </head>
 
 <body onload="changeHeading()">
@@ -14,22 +14,28 @@
             var currentTitle = localStorage.getItem('TheorySelection'); //returns value of object for key requested
             if (currentTitle == 'BTL') {
                 document.getElementById('bookingPageTitle2nd').innerHTML = "Booking For BTL"
+                document.title = "Booking For BTL Options Page"
             }
             if (currentTitle == 'BTP') {
                 document.getElementById('bookingPageTitle2nd').innerHTML = "Booking For Basic Theory Practice"
+                document.title = "Booking For Basic Theory Practice Options Page"
             }
             if (currentTitle == 'BTE') {
                 document.getElementById('bookingPageTitle2nd').innerHTML = "Booking For Basic Theory Evaluation"
+                document.title = "Booking For Basic Theory Evaluation Options Page"
             }
 
             if (currentTitle == 'FTL') {
                 document.getElementById('bookingPageTitle2nd').innerHTML = "Booking For FTL"
+                document.title = "Booking For FTL Options Page"
             }
             if (currentTitle == 'FTP') {
                 document.getElementById('bookingPageTitle2nd').innerHTML = "Booking For Final Theory Practice"
+                document.title = "Booking For Final Theory Practice Options Page"
             }
             if (currentTitle == 'FTE') {
                 document.getElementById('bookingPageTitle2nd').innerHTML = "Booking For Final Theory Evaluation"
+                document.title = "Booking For Final Theory Evaluation Options Page"
             }
 
         }
@@ -42,7 +48,7 @@
             <font color="#000000" face="Trebuchet MS" size="4"><b>Loading...</b></font><br> <img src="image/await.gif"><br>
             <font color="#000000" face="Trebuchet MS" size="2">Please wait a moment</font></td></tr></tbody></table></center></div>
         -->
-    <!--<div id=processmsg style="position:absolute; z-index:3; left:400; top:200; width:200; height:50; 
+    <!--<div id=processmsg style="position:absolute; z-index:3; left:400; top:200; width:200; height:50;
         border-width:4; border-style:ridge; background-color:#CCECFF">
         <center><br><font face='Arial' Size=3><b>Processing......</b></font><br><br></center></div>-->
     <table width="100%" cellspacing="0" cellpadding="0">
@@ -50,39 +56,39 @@
             <tr valign="top">
                 <td><img src="image/invis.gif" width="10" height="1"></td>
                 <td width="100%" valign="top">
-                    <!--                
+                    <!--
         <script language="javascript">
             var session = 'TRUE';
             var invalid = '';
-            
-            if (session != "TRUE" ){	
+
+            if (session != "TRUE" ){
                 top.location.href = '/bbdc/errors/ErrorSessionEnd.asp';
             }
             //if (Request.getParameter("post") = "Y")
             //	Response.Redirect("/bbdc/errors/ErrorNavigation.asp");
-                
+
             //if (top == window)||(invalid == "TRUE")
-            //		top.location.href = 'errors/ErrorNavigate.asp';		
-            
+            //		top.location.href = 'errors/ErrorNavigate.asp';
+
             if (top == window)
-                top.location.href = 'errors/ErrorNavigate.asp';			
-            
+                top.location.href = 'errors/ErrorNavigate.asp';
+
             </script>
             <span id="tipDiv1" name="tipDiv1"></span>
-                <script language="javascript">	
-                
+                <script language="javascript">
+
                     parent.topFrame.location.reload();
-                
+
                 </script>
-                
+
             <script language="javascript">
             var sessionAcct = '944821';
             var var_acct = parent.leftFrame.var_acct;
-             if (sessionAcct != var_acct) 
+             if (sessionAcct != var_acct)
              {
                 alert ("Your Session has logout.\nPlease Login again.");
                 top.location.href = '/bbdc/errors/ErrorSessionEnd.asp';
-             }	
+             }
             </script>
         -->
 
@@ -294,7 +300,7 @@
                                                     <td class="txt">
                                                         <input type="hidden" name="defTLVenue" id="defTLVenue"
                                                             value="7">
-                                                    
+
                                                     <input type="radio" name="optVenue" id="optVenue" checked=""
                                                         value="7" onclick="checkvenue('7','7','HBTL')"> HBTL
                                     </td>
@@ -325,7 +331,7 @@
                 <td class="txtbold" valign="top" style="text-align:right;white-space:nowrap;">&nbsp;</td>
                 <td class="txt">&nbsp;</td>
             </tr>
-            <tr valign="top"> 
+            <tr valign="top">
                 <td class="txtbold" align="right"><img src="image/invis.gif" width="65" height="1"></td>
                 <td class="txt" width="100%">
                   <input type="button" name="btnBack" value="<< Back" class="btn" onclick="javascript:history.go(-1);" onmouseover="blueBtnOver(this)" onmouseout="blueBtnOut(this)" style="background: rgb(0, 102, 204);">
@@ -475,7 +481,7 @@
                     //proceed to next calendar page
                     if (blnResult) {
                         submitTheoryOptions();
-                        var currentMedium = localStorage.getItem('Medium') //English 
+                        var currentMedium = localStorage.getItem('Medium') //English
                         if (!(currentMedium == 'English')) {
                             return self.location.assign('error.html');
                         }
