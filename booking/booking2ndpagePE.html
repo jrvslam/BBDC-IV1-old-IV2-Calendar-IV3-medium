@@ -5,32 +5,40 @@
     <link rel="stylesheet" href="../style.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     <script language="javascript" src="../admin/inc-script/common.js"></script>
-
+    <script src="../logging.js"></script>
 </head>
 
-<body onload="changeHeading()">
+<body>
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            changeHeading();
+        });
+
         function changeHeading() {
             var currentTitle = localStorage.getItem('TheorySelection'); //returns value of object for key requested
 
             if (currentTitle == 'BTP') {
                 document.getElementById('bookingPageTitle2nd').innerHTML = "Booking For Basic Theory Practice"
+                document.title = "Booking For Basic Theory Practice Options Page";
                 document.getElementById("LessonOpts").style.display = "none"
                 document.getElementById('space').style.display = "none"
             }
             if (currentTitle == 'BTE') {
                 document.getElementById('bookingPageTitle2nd').innerHTML = "Booking For Basic Theory Evaluation"
+                document.title = "Booking For Basic Theory Evaluation Options Page";
                 document.getElementById("LessonOpts").style.display = "none"
                 document.getElementById('space').style.display = "none"
 
             }
             if (currentTitle == 'FTP') {
                 document.getElementById('bookingPageTitle2nd').innerHTML = "Booking For Final Theory Practice"
+                document.title = "Booking For Final Theory Practice Options Page";
                 document.getElementById("LessonOpts").style.display = "none"
                 document.getElementById('space').style.display = "none"
             }
             if (currentTitle == 'FTE') {
                 document.getElementById('bookingPageTitle2nd').innerHTML = "Booking For Final Theory Evaluation"
+                document.title = "Booking For Final Theory Evaluation Options Page";
                 document.getElementById("LessonOpts").style.display = "none"
                 document.getElementById('space').style.display = "none"
             }
@@ -43,7 +51,7 @@
             <font color="#000000" face="Trebuchet MS" size="4"><b>Loading...</b></font><br> <img src="image/await.gif" border="0"><br>
             <font color="#000000" face="Trebuchet MS" size="2">Please wait a moment</font></td></tr></tbody></table></center></div>
         -->
-    <!--<div id=processmsg style="position:absolute; z-index:3; left:400; top:200; width:200; height:50; 
+    <!--<div id=processmsg style="position:absolute; z-index:3; left:400; top:200; width:200; height:50;
         border-width:4; border-style:ridge; background-color:#CCECFF">
         <center><br><font face='Arial' Size=3><b>Processing......</b></font><br><br></center></div>-->
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -51,39 +59,39 @@
             <tr valign="top">
                 <td><img src="image/invis.gif" width="10" height="1" border="0"></td>
                 <td width="100%" valign="top">
-                    <!--                
+                    <!--
         <script language="javascript">
             var session = 'TRUE';
             var invalid = '';
-            
-            if (session != "TRUE" ){	
+
+            if (session != "TRUE" ){
                 top.location.href = '/bbdc/errors/ErrorSessionEnd.asp';
             }
             //if (Request.getParameter("post") = "Y")
             //	Response.Redirect("/bbdc/errors/ErrorNavigation.asp");
-                
+
             //if (top == window)||(invalid == "TRUE")
-            //		top.location.href = 'errors/ErrorNavigate.asp';		
-            
+            //		top.location.href = 'errors/ErrorNavigate.asp';
+
             if (top == window)
-                top.location.href = 'errors/ErrorNavigate.asp';			
-            
+                top.location.href = 'errors/ErrorNavigate.asp';
+
             </script>
             <span id="tipDiv1" name="tipDiv1"></span>
-                <script language="javascript">	
-                
+                <script language="javascript">
+
                     parent.topFrame.location.reload();
-                
+
                 </script>
-                
+
             <script language="javascript">
             var sessionAcct = '944821';
             var var_acct = parent.leftFrame.var_acct;
-             if (sessionAcct != var_acct) 
+             if (sessionAcct != var_acct)
              {
                 alert ("Your Session has logout.\nPlease Login again.");
                 top.location.href = '/bbdc/errors/ErrorSessionEnd.asp';
-             }	
+             }
             </script>
         -->
 
@@ -165,7 +173,7 @@
                                 </tr>
                                 <tr valign="top">
                                     <td colspan="2">
-                                        
+
                                         <table width="100%" border="0" cellspacing="2" cellpadding="2">
                                             <tbody>
                                                 <tr valign="top">
@@ -231,9 +239,9 @@
                                                 <tr valign="top">
                                                     <td>&nbsp;</td>
                                                 </tr>
-                                                <tr valign="top"> 
+                                                <tr valign="top">
                                                     <td class="txtbold" valign="top" style="text-align:right; white-space:nowrap;">Session:</td>
-                                                    <td class="txt">	
+                                                    <td class="txt">
                                                      <input type="checkbox" name="Session" value="1" id="checkSes"> 1 &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Session" value="2" id="checkSes"> 2 &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Session" value="3" id="checkSes"> 3 &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Session" value="4" id="checkSes"> 4 &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Session" value="5" id="checkSes"> 5 &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Session" value="6" id="checkSes"> 6 &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Session" value="7" id="checkSes"> 7 &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Session" value="8" id="checkSes"> 8 &nbsp;&nbsp;&nbsp;&nbsp;<br><input type="checkbox" name="Session" value="9" id="checkSes"> 9 &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Session" value="10" id="checkSes">10&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Session" value="11" id="checkSes">11&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Session" value="12" id="checkSes">12&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Session" value="13" id="checkSes">13&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Session" value="14" id="checkSes">14&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Session" value="15" id="checkSes">15&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="Session" value="16" id="checkSes">16&nbsp;&nbsp;&nbsp;&nbsp;<br><input type="checkbox" name="allSes" id="checkSes" onclick="checkBoxes(this.form, this, this.checked)"> All Sessions &nbsp;&nbsp;&nbsp;&nbsp;
                                                     </td>
                                                   </tr>
@@ -279,7 +287,7 @@
                                                     <td class="txt">
                                                         <input type="hidden" name="defTLVenue" id="defTLVenue"
                                                             value="7">
-                                                    
+
                                                     <input type="radio" name="optVenue" id="optVenue" checked=""
                                                         value="7" onclick="checkvenue('7','7','HBTL')"> BBDC
                                     </td>
@@ -399,7 +407,7 @@
                         //venue:
                         localStorage.removeItem('Venue')
                         localStorage.setItem('Venue', 'BBDC')
-                        
+
                         return;
                     }
 
@@ -461,7 +469,7 @@
                         //proceed to next calendar page
                         if (blnResult) {
                             submitTheoryOptions();
-                            var currentMedium = localStorage.getItem('Medium') //English 
+                            var currentMedium = localStorage.getItem('Medium') //English
                             if (!(currentMedium == 'English')) {
                                 return self.location.assign('error.html');
                             }
